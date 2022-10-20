@@ -15,14 +15,12 @@ Language: Java
 
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        
-        // size of array which will contain all elements from nums1 and nums2
-        int size3 = nums1.length+nums2.length;
+      
         // blank output variable
         double output = 0.0;
         
         // new int array that will is the size of both nums1 and nums2 combined
-        int[] nums3 = new int[size3];
+        int[] nums3 = new int[nums1.length+nums2.length];
         // tracking the index in our new array, so that we can edit the array across different for-loops
         int index = 0;
         
