@@ -7,7 +7,7 @@ Median of Two Sorted Arrays
 
 2094 / 2094 test cases passed.
 Status: Accepted
-Runtime: 17 ms
+Runtime: 15 ms
 Memory Usage: 50.4 MB
 Language: Java
 */
