@@ -1,3 +1,13 @@
+/*
+Poor Pigs
+
+18 / 18 test cases passed.
+Status: Accepted
+Runtime: 4 ms
+Memory Usage: 5.9 MB
+Language: CPP
+*/
+
 class Solution {
 public:
 
