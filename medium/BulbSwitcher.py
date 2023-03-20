@@ -1,8 +1,4 @@
-# 35 / 35 test cases passed.
-# Status: Accepted
-# Runtime: 56 ms - top 50%
-# Memory Usage: 13.8 MB - top 5%
-# Language: Python
+import math
 
 class Solution:
     def bulbSwitch(self, n: int) -> int:

@@ -1,15 +1,7 @@
+import java.util.HashMap;
+
 class Solution {
     public int romanToInt(String s) {
-
-/*
-Roman to Integer
-
-3999 / 3999 test cases passed.
-Status: Accepted
-Runtime: 21 ms
-Memory Usage: 50.5 MB
-Language: Java
-*/
     HashMap <String, Integer> hash = new HashMap<String, Integer>();
     hash.put("I",1);
     hash.put("V",5);
