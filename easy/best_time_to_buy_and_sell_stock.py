@@ -1,6 +1,12 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
+        # 'moving window' problem: we will keep two pointers, l:int and r:int
+        # we will move r:int until it is greater than l:int
+        #   we will then compute if the profit is greater than our 'high score'
+        #      if it is, then we redefine our 'high score' and go on our business.
+        #   else, we will iterate l:int to r:int and continue the process
+        
         l,r = 0,1
         maxProfit = 0
 
