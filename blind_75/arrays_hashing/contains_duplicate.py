@@ -48,7 +48,4 @@ class Solution:
 
         hashset = set(nums)
 
-        if(len(hashset) == len(nums)):
-            return False
-
-        return True
+        return not len(hashset) == len(nums)
