@@ -6,11 +6,12 @@ class Solution:
 
         hashmap = {}
 
-        for i,n in enumerate(nums):
-            if target - n in hashmap:
-                return [i,hashmap[target-n]]
-            hashmap[n] = i
+        for i, x in enumerate(nums):
+            if target - x in hashmap:
+                return [i,hashmap[target-x]]
+            hashmap[x] = i
 
+            
 
 # Second solution (brute force)
 # Time complexity: O(n^2), space complexity: O(1)
@@ -18,11 +19,8 @@ class Solution:
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
- 
-        for i, n in enumerate(nums):
-            for j, m in enumerate(nums):
-             
-                if m + n == target and i is not j:
-                    return [i,j]
+        for i in enumerate(nums):
+            for y in range(i,len(nums)):
+                if nums[i] + nums[y] == target and i is not y:
+                    return [i,y]
 
-    

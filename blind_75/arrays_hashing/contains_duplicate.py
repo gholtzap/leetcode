@@ -38,6 +38,7 @@ class Solution:
     
     
 # Solution 3 (bonus):
+#   O(N) Time complexity, O(N) space
 #   Convert to HashSet, if len(HashSet) == len(List) return False  else return True
 
 class Solution:
