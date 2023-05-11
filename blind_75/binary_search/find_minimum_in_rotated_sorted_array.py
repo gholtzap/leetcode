@@ -1,14 +1,18 @@
-# Easiest solution: (kinda cheating)
+# Easiest solutions: (kinda cheating)
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         nums.sort()
         return nums[0]
 
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+
+        return min(nums)
 
 # To do this prblem authentically, basically we need to replace nums.sort() with the most efficient sorting algorithm.
 # We can use quicksort like so:
-# Keep in mind that although this is more efficient on larger samples, the leetcode testcases are small and prefer binary sort
+# Keep in mind that although this is more efficient on larger samples, the leetcode testcases are small 
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
