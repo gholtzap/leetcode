@@ -20,6 +20,7 @@ class Solution:
     
     
 # Solution 2 (just solution 1 except faster)
+# Only does the algorithm for every number that could be the start of a sequence instead of every number
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
