@@ -23,4 +23,4 @@ class Solution:
             else:
                 stack.append(x)
 
-        return len(stack) == 0
+        return not stack
