@@ -22,7 +22,7 @@ class Solution:
         return ''.join(sList)
     
 
-# Solution 3 (just solution 1 but slightly worse)
+# Solution 2 (just solution 1 but slightly worse)
 # O(n) | O(n)
 
 class Solution:
