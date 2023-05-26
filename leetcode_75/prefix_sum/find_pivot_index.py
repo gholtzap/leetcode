@@ -1,3 +1,21 @@
+# Solution 1
+# O(n) | O(1)
+
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+
+        if len(nums) == 1:
+            return 0
+
+        totalSum,leftSum = sum(nums),0
+
+        for i,x in enumerate(nums):
+            rightSum = totalSum - leftSum - x
+            if rightSum == leftSum:
+                return i
+            leftSum += x
+        return -1
+
 
 
 # Solution 1
