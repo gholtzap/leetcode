@@ -1,0 +1,27 @@
+# Solution 1
+# O(n^2) | O(n)
+
+class Solution:
+    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+
+
+        hashset1 = set(nums1)
+        hashset2 = set(nums2)
+
+        output1,output2 = [],[]
+
+        for x in nums1:
+            if x not in hashset2 and x not in output1:
+                output1.append(x)
+
+        for x in nums2:
+            if x not in hashset1 and x not in output2:
+                output2.append(x)
+
+
+        return [output1,output2]
+    
+
+
+                
+            
