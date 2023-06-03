@@ -23,5 +23,24 @@ class Solution:
     
 
 
-                
+# Solution 2
+# O(n) | O(n)
+
+class Solution:
+    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+
+        output1,output2 = [],[]
+   
+        hashset1 = set(nums1)
+        hashset2 = set(nums2)
+
+        test = list(hashset1.symmetric_difference(hashset2))
+        
+        for x in test:
+            if x not in hashset1:
+                output2.append(x)
+            if x not in hashset2:
+                output1.append(x)
+
+        return [output1,output2] 
             
