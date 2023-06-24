@@ -1,5 +1,25 @@
 # Solution 1
 # O(n^2) | O(n)
+class Solution:
+    def leastBricks(self, wall: List[List[int]]) -> int:
+        
+        hashmap = defaultdict(int)
+        sum_row = sum(wall[0])
+
+        for row in wall:
+            tempSum = 0
+            for brick in row[:-1]:
+                tempSum += brick
+                if tempSum != sum_row:
+                    hashmap[tempSum] += 1
+
+        if not hashmap:
+            return len(wall)
+        else:
+            return len(wall) - max(hashmap.values())
+        
+# Solution 2
+# O(n^2) | O(n)
 
 class Solution:
     def leastBricks(self, wall: List[List[int]]) -> int:
