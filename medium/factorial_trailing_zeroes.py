@@ -1,6 +1,17 @@
 # Solution 1
-# O(n) | O(n)
+# O(log(n)) | O(1)
 
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        x,r=5,0
+        while x<=n:
+            r+=n//x
+            x*=5
+        return r
+
+
+# Solution 2
+# O(n) | O(n)
 
 class Solution:
     def trailingZeroes(self, n: int) -> int:
