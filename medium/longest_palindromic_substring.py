@@ -1,29 +1,27 @@
 # Solution 1
-# O(n^2) | O(n)
+# O(n^3) | O(n)
 
 class Solution:
-
-    def isPalindrome(self, s:str) -> bool:
-        return s[::-1] == s
-
     def longestPalindrome(self, s: str) -> str:
-        if len(s) == 1:
-            return s
+        s_len = len(s)
+        l, r = 0, 0
+        output, output_len = "", 0
 
-        l,r,output = 0,0,""
-
-        while l < len(s):
+        while l < s_len:
+            if s_len - l <= output_len:
+                return output 
             r = 0
-           
-            while r < len(s):
-                if len(output) > r-l:
-                    r+=1
+            while r < s_len:
+                if output_len > r - l:
+                    r += 1
                     continue
-                temp = s[l:r+1]
-                if self.isPalindrome(temp) and len(temp) > len(output):
-                    output = temp
-                r+=1
-            l+=1
+                if output_len < r - l + 1:
+                    temp = s[l:r+1]
+                    if temp[::-1] == temp:
+                        output = temp
+                        output_len = r - l + 1
+                r += 1
+            l += 1
         return output
 
     
