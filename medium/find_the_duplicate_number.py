@@ -23,4 +23,14 @@ class Solution:
         for i in range(len(nums)-1):
             if nums[i] == nums[i+1]:
                 return nums[i]
-            
+
+          
+# Solution 3
+# O(n^2) | O(n)
+
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+
+        for x in range(len(nums)):
+            if nums[x] in nums[x+1:]:
+                return nums[x]
