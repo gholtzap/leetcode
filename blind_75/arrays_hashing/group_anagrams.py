@@ -40,3 +40,20 @@ class Solution:
             output.append(temp)
 
         return output
+    
+# Solution 3
+# O(n * n log n) | O(n)
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        
+        hashmap = {}
+
+        for s in strs:
+            sorted_s = "".join(sorted(s))
+            if sorted_s not in hashmap:
+                hashmap[sorted_s] = [s]
+            else:
+                hashmap[sorted_s].append(s)
+                
+        return list(hashmap.values())
