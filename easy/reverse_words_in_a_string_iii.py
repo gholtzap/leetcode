@@ -9,7 +9,7 @@ class Solution:
         output = ""
         for i in range(len(words)-1):
             output+= self.reverse(words[i]) + " "
-        
+                
         output+=self.reverse(words[-1])
 
         return output
@@ -24,8 +24,7 @@ class Solution:
 
 class Solution:
     def reverseWords(self, s: str) -> str:
+        return " ".join(word[::-1] for word in s.split(' '))
 
-        words = s.split(' ')
-        return " ".join(word[::-1] for word in words)
-    
+
     
