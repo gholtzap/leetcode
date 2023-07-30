@@ -22,3 +22,17 @@ class Solution:
                 count+=1
             output += str(count)
         return output
+    
+    
+# Solution 2 (Utilizing Recursion)
+# O(log7 n) | O(log7 n)
+
+class Solution:
+    def convertToBase7(self, num: int) -> str:
+        if num < 0:
+            return "-" + self.convertToBase7(-num)
+        elif num < 7:
+            return str(num)
+        else:
+            return self.convertToBase7(num // 7) + str(num % 7)
+
