@@ -17,3 +17,15 @@ class Solution:
     
     def reverse(self, s:str) -> str:
         return s[::-1]
+    
+    
+# Solution 2 (Solution 1 logic except not optimized for readability)
+# O(n) | O(n)
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+
+        words = s.split(' ')
+        return " ".join(word[::-1] for word in words)
+    
+    
