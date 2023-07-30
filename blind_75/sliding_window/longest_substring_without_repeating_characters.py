@@ -7,13 +7,11 @@ class Solution:
         if len(s) == 0 or len(s) == 1:
             return len(s)
 
-        hashmap,output = {},1
-
-        l,r = 0,0
+        l,r,output = 0,0,1
+        
         while r < len(s):
             r+=1
             temp = s[l:r]
-            #print(f"Now testing {temp}")
             if not len(temp) == len(set(temp)):
                 l+=1
                 continue
