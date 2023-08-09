@@ -1,5 +1,5 @@
 # Solution 1
-
+# O(n) | O(n)
 from collections import Counter
 
 class Solution:
@@ -16,6 +16,8 @@ class Solution:
     
     
 # Solution 2
+# O(n^2) | O(n)
+
 
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
@@ -24,7 +26,7 @@ class Solution:
     
 
 # Solution 3
-
+# O(n^2) | O(n) 
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
         output = []
