@@ -17,3 +17,25 @@ class Solution:
 
         return ans
 
+# Solution 2
+# O(n^3) | O(n)
+
+class Solution:
+    def sumOddLengthSubarrays(self, arr: List[int]) -> int:
+        sums = []
+        curr,j = -1,0
+        # O(n)
+        for i in range(len(arr)):
+            j,temp=0,0
+            curr+=2
+            if curr > len(arr): break
+            if j + curr > len(arr): continue
+
+            # O(1) -> O(n)
+            while j + curr <= len(arr):
+                sums+=arr[j:j+curr]
+                j+=1
+        return sum(sums)
+
+
+# Worst case O(n^3)
